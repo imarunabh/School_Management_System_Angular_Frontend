@@ -1,9 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 button{
-    background-color: red;
+    background-color:#1e81b0;
     height: 50px;
-    width: 200px;
+    width: 120px;
+    margin: 5px;
+   
 }
 
 .navigation{
-    margin-top: 5px;
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    opacity: 0.9;
+}
+
+nav{
+    margin: 5px;
+}
+
+.dashboard{
+    width: 150px;
+}
+
+.teacher{
+    background-color: #377b30;
 }

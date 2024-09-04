@@ -1,0 +1,32 @@
+<div class="side-bar">
+    <div id="profile-icon">
+     <mat-icon id="person" >person</mat-icon>
+     <p>{{teacher?.name}}</p>
+    </div>
+   <div class="details">
+     <div class="detail">
+         <mat-icon >email</mat-icon>
+     <span>{{teacher?.email}}</span>
+     </div>
+ 
+     <div class="detail">
+         <mat-icon >email</mat-icon>
+     <span>{{teacher?.s_Class}}<sup>th</sup> </span>
+     </div> 
+ 
+     <div class="detail">
+         <mat-icon >water</mat-icon>
+     <span>{{teacher?.bloodGroup}}</span>
+    </div>
+ 
+     <div class="detail">
+         <mat-icon >Calendar</mat-icon>
+     <span>{{teacher?.dob | date:'YYYY-MM-dd'}}</span>
+     </div>
+ 
+     <div class="detail">
+         <mat-icon >home</mat-icon>
+     <span>{{teacher?.address}}</span>
+     </div>
+ </div>
+ </div>

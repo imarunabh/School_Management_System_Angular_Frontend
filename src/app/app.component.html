@@ -1,10 +1,55 @@
+<div *ngIf="!isAdminLoggedIn && !isStudentLoggedIn && !isTeacherLoggedIn" class="navigation " >
 <nav>
-  <div class="navigation ">
     <button mat-fab extended routerLink="login">
-  <mat-icon>login</mat-icon>
-   Login
-</button>
-</div>
+        <mat-icon>login</mat-icon>
+         Login
+    </button>
 </nav>
+</div>
+
+
+<div class="navigation ">
+<nav *ngIf="isAdminLoggedIn">
+    <button class="dashboard" mat-fab extended routerLink="admin/dashboard">
+        <mat-icon>dashboard</mat-icon>
+         Admin Dashboard
+    </button>
+
+    <button  (click)="logout()" mat-fab extended routerLink="login">
+      <mat-icon>logout</mat-icon>
+       Logout
+    </button>
+</nav>
+</div>
+
+<div class="navigation ">
+<nav *ngIf="isStudentLoggedIn">
+    <button class="dashboard student" mat-fab extended routerLink="student/dashboard">
+        <mat-icon>dashboard</mat-icon>
+         Student Dashboard
+    </button>
+
+    <button  (click)="logout()" mat-fab extended routerLink="login">
+      <mat-icon>logout</mat-icon>
+       Logout
+    </button>
+</nav>
+</div>
+
+
+<div class="navigation ">
+<nav *ngIf="isTeacherLoggedIn">
+ 
+    <button class="dashboard teacher" mat-fab extended routerLink="teacher/dashboard">
+        <mat-icon>dashboard</mat-icon>
+         Teacher Dashboard
+    </button>
+
+    <button class="teacher"  (click)="logout()" mat-fab extended routerLink="login">
+      <mat-icon>logout</mat-icon>
+       Logout
+    </button>
+</nav>
+</div>
 
 <router-outlet></router-outlet>
