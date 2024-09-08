@@ -1,3 +1,32 @@
-<div class="parent">
-    
-</div>
+<div class="side-bar">
+    <div id="profile-icon">
+     <mat-icon id="person" >person</mat-icon>
+     <p>{{admin?.name}}</p>
+    </div>
+   <div class="details">
+     <div class="detail">
+         <mat-icon >email</mat-icon>
+     <span>{{admin?.email}}</span>
+     </div>
+ 
+     <div class="detail">
+         <mat-icon >email</mat-icon>
+     <span>{{admin?.s_Class}}<sup>th</sup> </span>
+     </div> 
+ 
+     <div class="detail">
+         <mat-icon >water</mat-icon>
+     <span>{{admin?.bloodGroup}}</span>
+    </div>
+ 
+     <div class="detail">
+         <mat-icon >Calendar</mat-icon>
+     <span>{{admin?.dob | date:'YYYY-MM-dd'}}</span>
+     </div>
+ 
+     <div class="detail">
+         <mat-icon >home</mat-icon>
+     <span>{{admin?.address}}</span>
+     </div>
+ </div>
+ </div>

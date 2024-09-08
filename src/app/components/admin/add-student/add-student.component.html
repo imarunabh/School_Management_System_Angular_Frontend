@@ -1,0 +1,53 @@
+<form class="login-form" [formGroup]="validateForm" >
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput type ="email" placeholder="Enter email" formControlName="email" >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Enter Password" formControlName="password" >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" placeholder="Enter Name" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Student Class</mat-label>
+        <input matInput type="text" placeholder="Enter Class" formControlName="s_Class">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Blood Group</mat-label>
+        <input matInput type="text" placeholder="Enter Blood Group" formControlName="bloodGroup">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Father's Name</mat-label>
+        <input matInput type="text" placeholder="Enter Father's Name" formControlName="fatherName">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Mother's Name</mat-label>
+        <input matInput type="text" placeholder="Enter Mother's Name" formControlName="motherName">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker"   formControlName="dob">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker" ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Address</mat-label>
+        <input matInput type="text" placeholder="Enter Your Address" formControlName="address">
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" (click)="postStudent()">Add</button>
+    
+
+</form>

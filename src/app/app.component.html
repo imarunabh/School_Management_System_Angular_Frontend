@@ -10,12 +10,16 @@
 
 <div class="navigation ">
 <nav *ngIf="isAdminLoggedIn">
-    <button class="dashboard" mat-fab extended routerLink="admin/dashboard">
+    <button class="dashboard admin" mat-fab extended routerLink="admin/add-student">
+        <mat-icon>add</mat-icon>
+         Add Student
+    </button>
+    <button class="dashboard admin" mat-fab extended routerLink="admin/dashboard">
         <mat-icon>dashboard</mat-icon>
          Admin Dashboard
     </button>
 
-    <button  (click)="logout()" mat-fab extended routerLink="login">
+    <button class="dashboard admin"  (click)="logout()" mat-fab extended routerLink="login">
       <mat-icon>logout</mat-icon>
        Logout
     </button>

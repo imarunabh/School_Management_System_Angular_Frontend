@@ -20,7 +20,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { AdminDashboardComponent } from './components/dashboards/admin-dashboard/admin-dashboard.component';
 import { TeacherDashboardComponent } from './components/dashboards/teacher-dashboard/teacher-dashboard.component';
-import { StudentDashboardComponent } from './components/dashboards/student-dashboard/student-dashboard.component'
+import { StudentDashboardComponent } from './components/dashboards/student-dashboard/student-dashboard.component';
+import { AddStudentComponent } from './components/admin/add-student/add-student.component'
+import { DatePipe } from '@angular/common'; 
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { StudentDashboardComponent } from './components/dashboards/student-dashb
     LoginComponent,
     AdminDashboardComponent,
     TeacherDashboardComponent,
-    StudentDashboardComponent
+    StudentDashboardComponent,
+    AddStudentComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,9 @@ import { StudentDashboardComponent } from './components/dashboards/student-dashb
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatCardModule
+    MatCardModule,
+    DatePipe
+    
   ],
   providers: [
     provideAnimationsAsync()
