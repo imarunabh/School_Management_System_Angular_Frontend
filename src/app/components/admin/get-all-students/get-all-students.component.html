@@ -1,0 +1,27 @@
+<div class="parent">
+<mat-card *ngFor="let student of students" class="example-card" appearance="outlined">
+    <mat-card-header>
+      <button mat-card-avatar class="example-header-image" (click)="zoom('https://material.angular.io/assets/img/examples/shiba1.jpg')"></button>
+      <mat-card-title>{{student.name}}</mat-card-title>
+      <mat-card-subtitle>{{student.s_Class}}<span *ngIf="student.s_Class=='1'"><sub>th</sub></span> 
+      <span *ngIf="student.s_Class=='2'"><sub>nd</sub></span> 
+      <span *ngIf="student.s_Class=='3'"><sub>rd</sub></span> 
+      <span *ngIf="student.s_Class=='4'"><sub>th</sub></span> 
+      <span *ngIf="student.s_Class>='5'"><sup>th</sup></span> 
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+     <p>{{student.email}}</p>
+     <p>{{student.bloodGroup}}</p>
+     <p>{{student.fatherName}}</p>
+     <p>{{student.motherName}}</p>
+     <p>{{student.dob | date:'yyyy-MM-dd'}}</p>
+     <p>{{student.age}}</p>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

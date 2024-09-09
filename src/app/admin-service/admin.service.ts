@@ -9,8 +9,15 @@ const BASIC_URL=["http://localhost:8080/"];
   providedIn: 'root'
 })
 export class AdminService {
-
+  imageUrl:string;
   constructor(private http:HttpClient) { }
+
+  setImage(url:string){
+    this.imageUrl=url;
+  }
+  getImage():string{
+    return this.imageUrl;
+  }
 
   createAuthenticationHeader():HttpHeaders{
     let authHeader :HttpHeaders = new HttpHeaders();
@@ -26,6 +33,12 @@ export class AdminService {
   }
 
   postStudent(studentDto:any):Observable<any>{
-    return this.http.post<[]>(BASIC_URL+"api/admin/student",studentDto,{headers: this.createAuthenticationHeader()})
+    return this.http.post<[]>(BASIC_URL+"api/student/create-student",studentDto,{headers: this.createAuthenticationHeader()})
   }
+
+  getAllStudents():Observable<any>{
+    return this.http.get<[]>(BASIC_URL+"api/student/get-All-Student",{headers:this.createAuthenticationHeader()})
+  }
+
+
 }

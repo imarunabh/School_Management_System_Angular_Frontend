@@ -8,8 +8,13 @@
 </div>
 
 
-<div class="navigation ">
+<div class="navigation">
 <nav *ngIf="isAdminLoggedIn">
+    <button class="dashboard admin" mat-fab extended routerLink="admin/get-all-students">
+        <mat-icon>fetch</mat-icon>
+        All Students
+    </button>
+
     <button class="dashboard admin" mat-fab extended routerLink="admin/add-student">
         <mat-icon>add</mat-icon>
          Add Student
@@ -26,7 +31,7 @@
 </nav>
 </div>
 
-<div class="navigation ">
+<div class="navigation">
 <nav *ngIf="isStudentLoggedIn">
     <button class="dashboard student" mat-fab extended routerLink="student/dashboard">
         <mat-icon>dashboard</mat-icon>
@@ -41,7 +46,7 @@
 </div>
 
 
-<div class="navigation ">
+<div class="navigation">
 <nav *ngIf="isTeacherLoggedIn">
  
     <button class="dashboard teacher" mat-fab extended routerLink="teacher/dashboard">

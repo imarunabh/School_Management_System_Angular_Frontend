@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { StorageService } from './services/storage/storage.service';
 import { NavigationEnd, Router } from '@angular/router';
+import { AdminService } from './admin-service/admin.service';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,9 @@ export class AppComponent {
   isAdminLoggedIn : boolean;
   isStudentLoggedIn : boolean;
   isTeacherLoggedIn :boolean;
+
+
+  
 
   ngOnInit(){
    

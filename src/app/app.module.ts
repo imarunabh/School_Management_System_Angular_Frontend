@@ -22,7 +22,10 @@ import { AdminDashboardComponent } from './components/dashboards/admin-dashboard
 import { TeacherDashboardComponent } from './components/dashboards/teacher-dashboard/teacher-dashboard.component';
 import { StudentDashboardComponent } from './components/dashboards/student-dashboard/student-dashboard.component';
 import { AddStudentComponent } from './components/admin/add-student/add-student.component'
-import { DatePipe } from '@angular/common'; 
+import { DatePipe } from '@angular/common';
+import { GetAllStudentsComponent } from './components/admin/get-all-students/get-all-students.component';
+import { ZoomImageComponent } from './components/admin/zoom-image/zoom-image.component'; 
+import {MatDialogModule} from '@angular/material/dialog'
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { DatePipe } from '@angular/common';
     AdminDashboardComponent,
     TeacherDashboardComponent,
     StudentDashboardComponent,
-    AddStudentComponent
+    AddStudentComponent,
+    GetAllStudentsComponent,
+    ZoomImageComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,8 @@ import { DatePipe } from '@angular/common';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCardModule,
-    DatePipe
+    DatePipe,
+    MatDialogModule
     
   ],
   providers: [
