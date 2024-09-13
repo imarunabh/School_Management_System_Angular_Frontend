@@ -8,8 +8,9 @@
 }
 
 img{
-    height: 40vh;
-    width: 25vw;    
+    height: 45vh;
+    width: 25vw; 
+    border-radius: 50%;   
 }
 
 .example-header-image{
@@ -17,4 +18,5 @@ background-color:#1e81b0;
     height: 50px;
     width: 120px;
     margin: 5px;
+    margin-top:20px;
 }

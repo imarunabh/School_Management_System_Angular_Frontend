@@ -1,7 +1,9 @@
 <div class="parent">
 <mat-card *ngFor="let student of students" class="example-card" appearance="outlined">
     <mat-card-header>
-      <button mat-card-avatar class="example-header-image" (click)="zoom('https://material.angular.io/assets/img/examples/shiba1.jpg')"></button>
+      <button mat-card-avatar class="example-header-image"
+      [style.background-image]="student.image ? 'url(' + student.image + ')' : 'https://material.angular.io/assets/img/examples/shiba1.jpg'" 
+        (click)="zoom((student.image)?(student.image):('https://material.angular.io/assets/img/examples/shiba1.jpg'))"></button>
       <mat-card-title>{{student.name}}</mat-card-title>
       <mat-card-subtitle>{{student.s_Class}}<span *ngIf="student.s_Class=='1'"><sub>th</sub></span> 
       <span *ngIf="student.s_Class=='2'"><sub>nd</sub></span> 
@@ -11,12 +13,12 @@
       </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-     <p>{{student.email}}</p>
-     <p>{{student.bloodGroup}}</p>
-     <p>{{student.fatherName}}</p>
-     <p>{{student.motherName}}</p>
-     <p>{{student.dob | date:'yyyy-MM-dd'}}</p>
-     <p>{{student.age}}</p>
+     <p><b>Email: </b>{{student.email}}</p>
+     <p><b>Blood Group: </b>{{student.bloodGroup}}</p>
+     <p><b>Father's Name: </b>{{student.fatherName}}</p>
+     <p><b>Mother's Name: </b> {{student.motherName}}</p>
+     <p><b>DOB: </b> {{student.dob | date:'yyyy-MM-dd'}}</p>
+     <p><b>Age: </b>{{student.age}}</p>
 
     </mat-card-content>
     <mat-card-actions>

@@ -63,6 +63,9 @@
         <input matInput type="text" placeholder="Enter Your Address" formControlName="address">
         <mat-error *ngIf="validateForm.get('address')?.hasError('required')">This Input is Required</mat-error>
     </mat-form-field>
+
+    <label for="image">Image</label>
+    <input type="file" name="image">
     
     <button mat-raised-button color="primary" [disabled]="validateForm.invalid" (click)="postStudent()">Add</button>
     

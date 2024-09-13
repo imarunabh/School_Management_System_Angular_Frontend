@@ -25,7 +25,7 @@ import { AddStudentComponent } from './components/admin/add-student/add-student.
 import { DatePipe } from '@angular/common';
 import { GetAllStudentsComponent } from './components/admin/get-all-students/get-all-students.component';
 import { ZoomImageComponent } from './components/admin/zoom-image/zoom-image.component'; 
-import {MatDialogModule} from '@angular/material/dialog'
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [

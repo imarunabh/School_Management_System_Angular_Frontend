@@ -17,11 +17,8 @@ export class AppComponent {
   isStudentLoggedIn : boolean;
   isTeacherLoggedIn :boolean;
 
-
   
-
   ngOnInit(){
-   
     this.updateUserLoggedStatus();
     this.router.events.subscribe(event =>{
       if(event instanceof NavigationEnd){

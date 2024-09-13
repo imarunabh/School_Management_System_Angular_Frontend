@@ -32,8 +32,12 @@ export class AdminService {
   )
   }
 
-  postStudent(studentDto:any):Observable<any>{
-    return this.http.post<[]>(BASIC_URL+"api/student/create-student",studentDto,{headers: this.createAuthenticationHeader()})
+  postStudent(studentDto:any,image:File):Observable<any>{
+    console.log(image);
+    const formData: FormData = new FormData();
+    formData.append('student', new Blob([JSON.stringify(studentDto)], { type: 'application/json' }));
+    formData.append('image', image);
+    return this.http.post<[]>(BASIC_URL+"api/student/create-student",formData,{headers: this.createAuthenticationHeader()})
   }
 
   getAllStudents():Observable<any>{

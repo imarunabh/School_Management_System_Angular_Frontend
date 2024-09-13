@@ -25,7 +25,10 @@ export class GetAllStudentsComponent implements OnInit{
     this.adminService.getAllStudents().subscribe((res)=>{
       // console.log(res);
       this.students=res;
-      console.log(this.students);
+      // console.log(this.students);
+      for(let student of this.students){
+        console.log(student.image);
+      }
     });
   }
   zoom(url:string){
