@@ -44,5 +44,9 @@ export class AdminService {
     return this.http.get<[]>(BASIC_URL+"api/student/get-All-Student",{headers:this.createAuthenticationHeader()})
   }
 
+  markTodaysAttendance(email:string):Observable<any>{
+    return this.http.post<[]>(BASIC_URL+"api/student/mark-attendance",email,{headers:this.createAuthenticationHeader()})
+  }
+
 
 }

@@ -20,7 +20,6 @@ export class ZoomImageComponent implements OnInit{
 
   close(){
     this.dialog.closeAll();
-
   }
 
 

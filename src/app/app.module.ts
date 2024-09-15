@@ -26,6 +26,10 @@ import { DatePipe } from '@angular/common';
 import { GetAllStudentsComponent } from './components/admin/get-all-students/get-all-students.component';
 import { ZoomImageComponent } from './components/admin/zoom-image/zoom-image.component'; 
 import {MatDialogModule} from '@angular/material/dialog';
+import { StudentAttendanceComponent } from './students/student-attendance/student-attendance.component';
+import { MatMenuModule } from '@angular/material/menu';
+//calendar imports
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -36,10 +40,12 @@ import {MatDialogModule} from '@angular/material/dialog';
     StudentDashboardComponent,
     AddStudentComponent,
     GetAllStudentsComponent,
-    ZoomImageComponent
+    ZoomImageComponent,
+    StudentAttendanceComponent
   ],
   imports: [
     BrowserModule,
+    FullCalendarModule,
     AppRoutingModule,
     MatIconModule,
     MatDividerModule,
@@ -55,7 +61,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     MatCardModule,
     DatePipe,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
+    
     
   ],
   providers: [

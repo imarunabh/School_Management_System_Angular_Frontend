@@ -11,6 +11,7 @@ import { noAuthGuard } from './guards/no-auth.guard';
 import { AddStudentComponent } from './components/admin/add-student/add-student.component';
 import { GetAllStudentsComponent } from './components/admin/get-all-students/get-all-students.component';
 import { ZoomImageComponent } from './components/admin/zoom-image/zoom-image.component';
+import { StudentAttendanceComponent } from './students/student-attendance/student-attendance.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent,canActivate:[noAuthGuard]},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'teacher/dashboard',component:TeacherDashboardComponent,canActivate:[teacherGuard]},
   {path:'student/dashboard',component:StudentDashboardComponent,canActivate:[studentGuard]},
   {path:'admin/add-student',component:AddStudentComponent,canActivate:[adminGuard]},
-  {path:'admin/get-all-students',component:GetAllStudentsComponent,canActivate:[adminGuard]}
+  {path:'admin/get-all-students',component:GetAllStudentsComponent,canActivate:[adminGuard]},
+  {path:'student/attendance',component:StudentAttendanceComponent,canActivate:[adminGuard]}
 ];
 
 @NgModule({

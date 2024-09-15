@@ -9,8 +9,16 @@ const BASIC_URL=["http://localhost:8080/"];
   providedIn: 'root'
 })
 export class StudentService {
-
+  email:string ="";
   constructor(private http:HttpClient) { }
+
+  setEmail(email:string){
+    this.email=email;
+  }
+  
+  getEmail():string{
+    return this.email;
+  }
 
   createAuthenticationHeader():HttpHeaders{
     let authHeader :HttpHeaders = new HttpHeaders();
@@ -22,6 +30,9 @@ export class StudentService {
   getStudentById():Observable<any>{
    return this.http.get<[]>(BASIC_URL+`api/student/${StorageService.getUserId()}`,
    {headers:this.createAuthenticationHeader()})
+  }
 
+  getStudentAttendanceByEmail():Observable<any>{
+    return this.http.post<[]>(BASIC_URL + `api/student/get-attendance-email`,this.email,{headers:this.createAuthenticationHeader()})
   }
 }

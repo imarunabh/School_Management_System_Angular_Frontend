@@ -1,0 +1,19 @@
+/* ::ng-deep .fc-daygrid-day-events{
+    background-color: red;
+
+}
+
+::ng-deep .fc-header-toolbar .fc-toolbar{
+    z-index: 1;
+    background-color:purple ;
+
+}
+
+::ng-deep .fc-toolbar-chunk{
+    background-color: aqua;
+}
+
+::ng-deep colgroup{
+    background-color: blue;
+    width: 20px;
+} */
