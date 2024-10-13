@@ -31,7 +31,7 @@ export class GetAllStudentsComponent implements OnInit{
     this.attendanceForm = this.fb.group({
       attendance_date:[new Date,[Validators.required]]
     })
-    console.log(this.attendanceForm.value);
+    // console.log(this.attendanceForm.value);
   }
 
   getAllStudents(){
@@ -57,7 +57,7 @@ export class GetAllStudentsComponent implements OnInit{
 
   markAttendance(email:string){
     this.adminService.markTodaysAttendance(email).subscribe((res)=>{
-      console.log(res);
+      // console.log(res);
     });
 
   }

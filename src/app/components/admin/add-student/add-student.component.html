@@ -64,9 +64,12 @@
         <mat-error *ngIf="validateForm.get('address')?.hasError('required')">This Input is Required</mat-error>
     </mat-form-field>
 
-    <label for="image">Image</label>
-    <input type="file" name="image">
-    
+   <!-- File upload styled like mat-form-field -->
+<div class="file-upload form-field">
+    <label for="image" class="file-label">Upload Image</label>
+    <div class="file-placeholder">{{ selectedFileName || 'Choose a file' }}</div>
+    <input type="file" name="image" id="image" class="file-input" (change)="onFileSelected($event)">
+  </div>
     <button mat-raised-button color="primary" [disabled]="validateForm.invalid" (click)="postStudent()">Add</button>
     
 

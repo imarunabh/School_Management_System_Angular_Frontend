@@ -16,3 +16,57 @@ mat-form-field {
     margin-bottom: 10px;
     width: 40vw;
 }
+
+.form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .file-upload {
+    position: relative;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    padding: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .file-upload:hover {
+    border-color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+  }
+  
+  .file-upload:focus-within {
+    border-color: #3f51b5; /* Material primary color */
+    box-shadow: 0 0 5px #3f51b5;
+  }
+  
+  .file-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .file-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    pointer-events: none;
+  }
+  
+  .file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Completely hide the file input */
+    cursor: pointer;
+  }
+  

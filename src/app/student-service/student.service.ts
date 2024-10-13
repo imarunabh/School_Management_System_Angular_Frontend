@@ -33,6 +33,7 @@ export class StudentService {
   }
 
   getStudentAttendanceByEmail():Observable<any>{
+    // console.log(this.email);
     return this.http.post<[]>(BASIC_URL + `api/student/get-attendance-email`,this.email,{headers:this.createAuthenticationHeader()})
   }
 }

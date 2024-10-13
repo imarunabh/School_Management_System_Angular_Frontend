@@ -57,6 +57,17 @@ export class AddStudentComponent {
     }
   });
   }
+  selectedFileName: string = '';
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+
+    if (input.files && input.files.length > 0) {
+      this.selectedFileName = input.files[0].name; // Get the selected file's name
+    } else {
+      this.selectedFileName = ''; // Reset if no file selected
+    }
+  }
   
 
 }

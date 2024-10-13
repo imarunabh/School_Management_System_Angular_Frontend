@@ -3,6 +3,8 @@ import { StudentService } from '../../student-service/student.service';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
+
+
 @Component({
   selector: 'app-student-attendance',
   templateUrl: './student-attendance.component.html',
@@ -40,26 +42,29 @@ export class StudentAttendanceComponent {
 
   getStudentAttendance() {
     this.studentService.getStudentAttendanceByEmail().subscribe((res) => {
-      // console.log(res);
-
-      var i:any;
-      for(i=0;i<res.length;i++){
-        const isoDate = res[i].date;
-        console.log(isoDate);
-      const formattedDate = new Date(isoDate).toISOString().split('T')[0];
-      console.log(formattedDate);
-      this.events.push({ title: res[i].att, date: formattedDate });
-      }
-
+      console.log(res);
+  
+      res.forEach((attendance: any) => {
+        const isoDate = attendance.date;
+  
+        // Convert the ISO date to a local date string in 'YYYY-MM-DD' format
+        const localDate = new Date(isoDate).toLocaleDateString('en-CA'); // 'en-CA' outputs in 'YYYY-MM-DD' format
+  
+        // Push the event with the formatted local date
+        this.events.push({ title: attendance.att, date: localDate });
+      });
+  
       // Update the calendarOptions to refresh the calendar with the new events
       this.calendarOptions = {
         ...this.calendarOptions,
-        events: [...this.events] // Trigger change detection by updating the reference
+        events: [...this.events], // Trigger change detection by updating the reference
       };
-
-      // console.log(this.events);
+  
+      // Debugging the events
+      console.log(this.events);
     });
   }
+  
 
   getEmail() {
     this.email = this.studentService.getEmail();

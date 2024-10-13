@@ -21,12 +21,14 @@
      <p><b>Age: </b>{{student.age}}</p>
 
     </mat-card-content>
+
     <mat-card-actions>
       <button mat-button (click)="setStudentEmail(student.email)" routerLink="/student/attendance">See Attendance</button>
-      <button mat-button (click)="markAttendance(student.email)"><b>Mark Today's Attendance</b></button>
 
       
+      <button mat-button (click)="markAttendance(student.email)"><b>Mark Today's Attendance</b></button>
       
+
     </mat-card-actions>
   </mat-card>
 </div>
