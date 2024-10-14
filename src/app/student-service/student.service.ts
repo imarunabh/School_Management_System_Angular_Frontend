@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StorageService } from '../services/storage/storage.service';
 
-const BASIC_URL = 'https://final-scms.onrender.com/';
+const BASIC_URL = 'http://localhost:8080/';
 
 
 @Injectable({
