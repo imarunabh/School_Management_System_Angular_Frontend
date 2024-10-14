@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { StorageService } from '../storage/storage.service';
 import { map, Observable, tap } from 'rxjs';
 
-const BASIC_URL = 'http://localhost:8080/';
+const BASIC_URL = 'https://final-scms.onrender.com/';
 
 export const AUTH_HEADER = 'authorization';
 
