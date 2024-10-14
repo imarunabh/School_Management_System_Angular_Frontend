@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { StorageService } from '../storage/storage.service';
 import { map, Observable, tap } from 'rxjs';
 
-const BASIC_URL =['https://school-management-system-backend-ufum.onrender.com/'];
+const BASIC_URL =['https://school-management-system-backend-ulub.onrender.com/'];
 export const AUTH_HEADER = 'authorization';
 
 @Injectable({

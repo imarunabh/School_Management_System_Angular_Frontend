@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StorageService } from '../services/storage/storage.service';
-const BASIC_URL =['https://school-management-system-backend-ufum.onrender.com/'];
+const BASIC_URL =['https://school-management-system-backend-ulub.onrender.com/'];
 
 @Injectable({
   providedIn: 'root'
