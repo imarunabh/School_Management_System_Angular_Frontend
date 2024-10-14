@@ -41,6 +41,7 @@ export class LoginComponent {
     ).subscribe((response)=>{
       console.log(response);
        if(StorageService.isAdminLoggedIn()){
+        console.log("Admin Logged");
         this.router.navigateByUrl("admin/dashboard");
        }
        else if(StorageService.isStudentLoggedIn()){
